@@ -21,10 +21,15 @@ int _printf(const char *format, ...)
 		if (*format != '%')
 		{
 			write(1, format, 1);
+			chr_to_print++;
 		}
 		else
 		{
 			format++;
+			if (*format == '\0')
+			{
+				break;
+			}
 			if (*format == '%')
 			{
 				write(1, format, 1);
@@ -40,8 +45,14 @@ int _printf(const char *format, ...)
 			else if (*format == 's')
 			{
 				char *tsr = va_arg(list_args, char*);
+				int str_len = 0;
 
-				write(1, tsr, 1);
+				while (tsr[str_len] != '\0')
+				{
+					str_len++;
+				}
+				write(1, tsr, str_len);
+				chr_to_print += str_len;
 			}
 		}
 		format++;
