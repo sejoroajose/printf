@@ -1,57 +1,43 @@
 #include "main.h"
 
 /**
- * _printf - function to print an integer
- * @format: formatted string
+ * print_int - prints an integer
+ * @arguments: input string
+ * @buf: buffer pointer size
+ * @ibuf: index expected for buffer pointer
  * Return: number of chars printed.
  */
 
-int _printf(const int *format, ...)
+int print_int(va_list arguments, char *buf, unsigned int ibuf)
 {
-	int chr_to_print = 0;
-	va_list list_args;
+	int int_input;
+	unsigned int int_in, int_temp, i, div, isneg;
 
-	if (format == NULL)
+	int_input = va_arg(arguments, int);
+	isneg = 0;
+	if (int_input < 0)
 	{
-		return (-1);
+		int_in = int_input * -1;
+		ibuf = handl_buf(buf, '-', ibuf);
+		isneg = 1;
 	}
-	va_start(list_args, format);
-	while (*format)
+	else
 	{
-		if (*format != '%')
-		{
-			write(1, format, 1);
-			chr_to_print++;
-		}
-		else
-		{
-			format++;
-			if (*format == '\0')
-			{
-				break;
-			}
-			if (*format == '%')
-			{
-				write(1, format, 1);
-				chr_to_print++;
-			}
-			else if (*format == 'd')
-			{
-				int str = va_arg(list_args, int);
-
-				write(1, &str, 1);
-				chr_to_print++;
-			}
-			else if (*format == 'i')
-			{
-				int *tsr = va_arg(list_args, int*);
-
-				write(1, &tsr, 1);
-				chr_to_print++;
-			}
-		}
-		format++;
+		int_in = int_input;
 	}
-	va_end(list_args);
-	return (chr_to_print);
+
+	int_temp = int_in;
+	div = 1;
+
+	while (int_temp > 9)
+	{
+		div *= 10;
+		int_temp /= 10;
+	}
+
+	for (i = 0; div > 0; div /= 10, i++)
+	{
+		ibuf = handl_buf(buf, ((int_in / div) % 10) + '0', ibuf);
+	}
+	return (i + isneg);
 }

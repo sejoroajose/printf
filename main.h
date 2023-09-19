@@ -5,9 +5,8 @@
 #include <unistd.h>
 
 int _printf(const char *format, ...);
-int _printf(const int *format, ...)
-int printf_int(va_list arguments, char *buf, unsigned int ibuf)
-int binary(int num);
-int octal(int num);
+int print_int(va_list arguments, char *buf, unsigned int ibuf);
+unsigned int handl_buf(char *buf, char c, unsigned int ibuf);
+int print_buf(char *buf, unsigned int nbuf);
 
 #endif
