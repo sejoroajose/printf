@@ -18,6 +18,7 @@ int _printf(const char *format, ...)
 	va_start(list_args, format);
 	while (*format)
 	{
+		format++;
 		if (*format != '%')
 		{
 			write(1, format, 1);
