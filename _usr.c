@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_usr - prints a string and values of
- * non-printed chars
- * @ibuf: index for buffer pointer
- * Return:returns number of chars printed
+ * print_usr - prints out a string and values of
+ * non-printed characters
+ * @ibuf: index for buffer arg pointer
+ * Return:returns number of characters printed
  */
 
 int print_usr(va_list arguments, char *buf, unsigned int ibuf)
