@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * prinnupx - prints number in uppercase hex
- * @arguments: input string
+ * prinnupx - prints the number in uppercase hex
+ * @arguments: input the string
  * @buf: buffer pointer
- * @ibuf: index for buffer pointer
- * Return: number of chars printed
+ * @ibuf: index for arg buffer pointer
+ * Return: number of characters printed
  */
 int prinnupx(va_list arguments, char *buf, unsigned int ibuf)
 {
