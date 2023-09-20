@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * handl_buf - concatenates the buffer characters
- * @buf: buffer pointer
+ * handl_buf - concatenates the arg buffer characters
+ * @buf: buffer arg pointer
  * @c: charcter to concatenate
- * @ibuf: index of buffer pointer
+ * @ibuf: index of buffer arg pointer
  * Return: index of buffer pointer.
  */
 unsigned int handl_buf(char *buf, char c, unsigned int ibuf)
