@@ -3,9 +3,9 @@
 /**
  * prinhint - prints a short integer
  * @arguments: input string
- * @buf: buffer pointer
+ * @buf: buffer arg pointer
  * @ibuf: index for buffer pointer
- * Return: number of chars printed.
+ * Return: number of characters printed.
  */
 int prinhint(va_list arguments, char *buf, unsigned int ibuf)
 {
