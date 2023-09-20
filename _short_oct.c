@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * prinhoct - prints long decimal number in octal
- * @arguments: input number
- * @buf: buffer pointer
+ * prinhoct - prints the long decimal number in octal
+ * @arguments:
+ * @buf: buffer arg pointer
  * @ibuf: index for buffer pointer
- * Return: number of chars printed.
+ * Return: number of characters printed.
  */
 int prinhoct(va_list arguments, char *buf, unsigned int ibuf)
 {
