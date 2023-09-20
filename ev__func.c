@@ -2,9 +2,9 @@
 
 /**
  * ev_print_func - returns the amount of identifiers.
- * @s: argument indentifier
- * @index: index of argument identifier.
- * Return: amount of identifiers.
+ * @s: argument arg indentifier
+ * @index: index of arg argument identifier.
+ * Return: amt of arg identifiers.
  */
 int ev_print_func(const char *s, int index)
 {
