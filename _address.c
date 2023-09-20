@@ -1,12 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_add - prints the address of an input variable
+ * print_add -the address of an input 
  * @arguments: input address.
- * @buf: buffer pointer.
- * @ibuf: index for buffer pointer
+ * @buf: arg buffer pointer.
+ * @ibuf: index for arg buffer pointer
  *
- * Return: number of chars printed.
+ * Return: number of characters printed.
  */
 int print_add(va_list arguments, char *buf, unsigned int ibuf)
 {
