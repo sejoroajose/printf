@@ -2,11 +2,10 @@
 
 /**
  * print_upx - prints a decimal in hexadecimal
- * @arguments: The character to print
+ * @arguments: The character arguments to print
  * @buf: buffer pointer
- * @ibuf: index for buffer pointer
- * Return: number of chars printed
  */
+
 int print_upx(va_list arguments, char *buf, unsigned int ibuf)
 {
 	int int_input, i, isnegative, count, first_digit;
